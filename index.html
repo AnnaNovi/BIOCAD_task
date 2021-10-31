@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BIOCAD</title><style> /*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[1].use[2]!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none; }
+
+@font-face {
+  font-family: "TTNorms-Regular";
+  src: url(assets/fonts/TTNorms-Regular.eot) format("embedded-opentype");
+  src: url(assets/fonts/TTNorms-Regular.woff) format("woff"), url(assets/fonts/TTNorms-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "TTNorms-Medium";
+  src: url(assets/fonts/TTNorms-Medium.eot) format("embedded-opentype");
+  src: url(assets/fonts/TTNorms-Medium.woff) format("woff"), url(assets/fonts/TTNorms-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+.inner {
+  box-sizing: border-box;
+  max-width: 1000px;
+  padding: 0 50px;
+  margin: 0 auto;
+  overflow-x: hidden; }
+  @media (max-width: 991px) {
+    .inner {
+      padding: 0 30px; } }
+  @media (max-width: 767px) {
+    .inner {
+      padding: 0 15px; } }
+  @media (max-width: 575px) {
+    .inner {
+      padding: 0 10px; } }
+
+.searchBlock__wrapper-top {
+  margin-top: 30px; }
+
+.searchBlock__text {
+  font-family: "TTNorms-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #8c8c8c; }
+
+.searchForm__wrapper-top-bottom {
+  margin-top: 16px;
+  margin-bottom: 10px; }
+
+.searchBlock__form {
+  display: flex;
+  align-items: center; }
+
+.searchForm__itemSearch {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  padding: auto 10px auto 12px;
+  font-family: "TTNorms-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #353535;
+  width: 210px;
+  height: 30px; }
+  .searchForm__itemSearch::-webkit-search-cancel-button {
+    display: none; }
+  @media (max-width: 375px) {
+    .searchForm__itemSearch {
+      width: 80%;
+      max-width: 210px; } }
+
+.searchForm__itemButton {
+  background: #353535;
+  border-radius: 3px;
+  border: none;
+  font-family: "TTNorms-Medium";
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ffffff;
+  padding: 8px 22px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: 1s; }
+  .searchForm__itemButton:hover {
+    transition: 1s;
+    opacity: 0.8; }
+
+.product__wrapper-top {
+  margin-top: 20px; }
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  @media (max-width: 575px) {
+    .product {
+      flex-direction: column-reverse; } }
+
+.product__category {
+  max-width: 320px;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.product__title {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  font-family: "TTNorms-Medium";
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #353535; }
+
+.product__titleIcon {
+  min-width: 40px;
+  min-height: 40px;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 4px; }
+
+.product__options {
+  display: flex;
+  flex-direction: column; }
+
+.product__selectBlock {
+  max-width: 220px;
+  position: relative;
+  margin-bottom: 20px; }
+
+.product__select {
+  background: transparent;
+  border: 1px solid #e9e9e9;
+  box-sizing: border-box;
+  font-family: "TTNorms-Regular";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #353535;
+  padding-left: 12px;
+  height: 30px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  z-index: 5;
+  cursor: pointer; }
+
+.product__selectArrow {
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  height: 6px;
+  right: 10px;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(0%, -50%); }
+
+.product__radio {
+  display: none; }
+
+.product__label {
+  font-family: "TTNorms-Regular";
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #353535;
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 8px; }
+  .product__label::before {
+    content: "";
+    box-sizing: border-box;
+    border: 2px solid #c1c1c1;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    margin-right: 13px; }
+  .product__label:last-of-type {
+    margin-bottom: 0px; }
+
+.product__radio + .product__label::before {
+  background: #ffffff; }
+
+.product__radio:checked + .product__label::before {
+  background: #4990e2;
+  background-clip: content-box;
+  padding: 2px;
+  box-sizing: border-box; }
+
+.product__button {
+  font-family: "TTNorms-Medium";
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ffffff;
+  padding: 8px 37px;
+  background: #4990e2;
+  border-radius: 3px;
+  border: none;
+  width: fit-content;
+  transition: 1s;
+  cursor: pointer; }
+  .product__button:hover {
+    transition: 1s;
+    opacity: 0.8; }
+
+.product__desc {
+  margin-bottom: 4px; }
+
+.product__description {
+  font-family: "TTNorms-Medium";
+  background: #f7f7f7;
+  border-radius: 5px;
+  padding: 20px 18px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #444651;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  width: calc(60% - 30px); }
+  @media (max-width: 575px) {
+    .product__description {
+      width: 100%;
+      margin-bottom: 30px; } }
+
+.product__desc-title {
+  color: #8c8c8c; }
+
+.product__desc-link {
+  text-decoration: none;
+  color: #4990e2; }
+
+.table__wrapper {
+  margin: 46px 0 106px 0; }
+
+.table {
+  padding: 86px 40px 60px 40px;
+  background: #ffffff;
+  border: 1px dashed #939da6;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  width: 100%;
+  font-family: "TTNorms-Regular";
+  border-spacing: 0px; }
+  .table tr {
+    font-size: 13px;
+    line-height: 15px;
+    text-align: start;
+    vertical-align: baseline;
+    border: 1px solid #e9e9e9; }
+    .table tr:first-of-type::before,
+    .table tr:first-of-type + tr::before {
+      content: "";
+      height: 0px; }
+    .table tr::before {
+      content: "";
+      height: 1px;
+      background: #e9e9e9;
+      width: calc(100% - 80px);
+      position: absolute; }
+  .table th {
+    color: #939da6;
+    text-align: start;
+    font-weight: normal; }
+    .table th.table__solutionInfo {
+      display: none; }
+    @media (max-width: 767px) {
+      .table th {
+        display: none; }
+        .table th.table__solutionTitle, .table th.table__solutionInfo {
+          display: table-cell; } }
+  .table td {
+    color: #353535;
+    padding: 20px 0; }
+    .table td:last-of-type {
+      font-size: 12px;
+      line-height: 14px; }
+    .table td:first-of-type {
+      font-size: 16px;
+      line-height: 19px; }
+    .table td.table__information {
+      display: none; }
+      .table td.table__information span {
+        color: #939da6; }
+      .table td.table__information div {
+        display: flex; }
+    @media (max-width: 767px) {
+      .table td {
+        display: none; }
+        .table td:first-of-type + td {
+          display: table-cell; }
+        .table td.table__information {
+          display: table-cell; } }
+  @media (max-width: 767px) {
+    .table {
+      padding: 86px 15px 60px 15px; } }
+  @media (max-width: 575px) {
+    .table {
+      border-spacing: 10px;
+      padding: 86px 0px 60px 0px; } }
+
+.table__solution {
+  white-space: nowrap; }
+  @media (max-width: 575px) {
+    .table__solution {
+      white-space: initial; } }
+
+.table__title {
+  position: absolute;
+  top: 40px; }
+
+.table__icon {
+  width: 16px;
+  height: 16px; }
+
+.table__slope,
+.table__offset {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 66px; }
+  @media (max-width: 767px) {
+    .table__slope p,
+    .table__offset p {
+      padding: 0 10px 0 3px; } }
+
+</style></head><body> <div class="inner"><div class="searchBlock searchBlock__wrapper-top"> <p class="searchBlock__text">Enter inventory number, guid or bims id</p><form class="searchBlock__form searchForm searchForm__wrapper-top-bottom" action=""><input class="searchForm__itemSearch" type="search" value="A-001234"><input class="searchForm__itemButton" type="submit" value="Search"></form></div><div class="product product__wrapper-top"> <div class="product__category"> <div class="product__title">Аналитические весы OHAUS Adventurer АХ32 (B715976163)<svg class="product__titleIcon"><use xlink:href="assets/icons/sprite.svg#icon"></use></svg></div><form class="product__options" action="" id="product__form"> <div class="product__selectBlock"><select class="product__select" name=""><option value="">1 month</option><option value="">2 month</option><option value="">3 month</option></select><svg class="product__selectArrow"><use xlink:href="assets/icons/sprite.svg#arrow"></use></svg></div><input class="product__radio" type="radio" name="product__radio" value="" checked id="r1"><label class="product__label" for="r1">Calibration</label><input class="product__radio" type="radio" name="product__radio" value="" id="r2"><label class="product__label" for="r2">Measuring</label><input class="product__radio" type="radio" name="product__radio" value="" id="r3"><label class="product__label" for="r3">Using</label></form><input class="product__button" type="submit" value="Generate report" form="product__form"></div><div class="product__description"> <p class="product__desc"><span class="product__desc-title">Тип оборудования:</span> Весы</p><p class="product__desc"><span class="product__desc-title">Статус:</span> Готов к работе</p><p class="product__desc"><span class="product__desc-title">Изготовитель:</span> Ohaus</p><p class="product__desc"><span class="product__desc-title">Модель:</span> AX-123</p><p class="product__desc"><span class="product__desc-title">Ответственное подразделение (ремонт):</span> Группа обслуживания лабораторного оборудования</p><p class="product__desc"><span class="product__desc-title">Эксплуатирующее подразделение:</span> Химико-аналитическая лаборатория 2.0</p><p class="product__desc"><span class="product__desc-title">МОЛ:</span> Иванов Иван Иванович</p><p class="product__desc"><span class="product__desc-title">Территория:</span> г. Санкт-Петербург (Нойдорф)</p><p class="product__desc"><span class="product__desc-title">Серийный номер:</span> B715976163</p><p class="product__desc"><span class="product__desc-title">GUID:</span> <a class="product__desc-link" href="">508b2a71-662e-4983-ae0c-3cb0c1cd21c5</a></p><p class="product__desc"><span class="product__desc-title">Bims ID: </span><a class="product__desc-link" href="">49db8db1-585f-4b9e-bbf0-8a59698edc8b</a></p><p class="product__desc"><span class="product__desc-title">Tam: </span><a class="product__desc-link" href="">А-001234</a></p></div></div><table class="table table__wrapper"> <caption class="table__title">Calibration report</caption><tbody> <tr> <th>Data</th><th class="table__solutionTitle">Used buffer solutions</th><th class="table__solutionInfo">Information</th><th>Slope,<br> % Norm 95-105</th><th>Offset, mV<br> Norm ±(0-20)</th><th>User</th></tr><tr> <td><p class="table__date">04.10.19</p><p class="table__time">10:23</p></td><td><p class="table__solution">В1: № 2000460789536: pH 1.09 </p><p class="table__solution">В2: № 2000460789536: pH 2.00 </p><p class="table__solution">В3: № 2000460789536: pH 4.01 </p><p class="table__solution">В4: № 2000460789536: pH 7.00 </p><p class="table__solution">В5: № 2000460789536: pH 9.21</p></td><td class="table__information"> <p><span>Data: </span>04.10.19 10:23</p><div><span>Slope, % (Norm 95-105): </span> <div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><div><span>Offset, mV (Norm ±(0-20)): </span> <div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><p><span>User: </span>Иванов Генадий Петрович</p></td><td><div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td><div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td>Иванов Генадий Петрович</td></tr><tr> <td><p class="table__date">04.10.19</p><p class="table__time">10:23</p></td><td><p class="table__solution">В1: № 2000460789536: pH 1.09 </p><p class="table__solution">В2: № 2000460789536: pH 2.00 </p><p class="table__solution">В3: № 2000460789536: pH 4.01 </p><p class="table__solution">В4: № 2000460789536: pH 7.00 </p><p class="table__solution">В5: № 2000460789536: pH 9.21</p></td><td class="table__information"> <p><span>Data: </span>04.10.19 10:23</p><div><span>Slope, % (Norm 95-105): </span> <div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><div><span>Offset, mV (Norm ±(0-20)): </span> <div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><p><span>User: </span>Петров Иван Генадьевич</p></td><td><div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td><div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td>Петров Иван Генадьевич</td></tr><tr> <td><p class="table__date">04.10.19</p><p class="table__time">10:23</p></td><td><p class="table__solution">В1: № 2000460789536: pH 1.09 </p><p class="table__solution">В2: № 2000460789536: pH 2.00 </p><p class="table__solution">В3: № 2000460789536: pH 4.01 </p><p class="table__solution">В4: № 2000460789536: pH 7.00 </p><p class="table__solution">В5: № 2000460789536: pH 9.21</p></td><td class="table__information"> <p><span>Data: </span>04.10.19 10:23</p><div><span>Slope, % (Norm 95-105): </span> <div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><div><span>Offset, mV (Norm ±(0-20)): </span> <div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><p><span>User: </span>Петров Иван Генадьевич</p></td><td><div class="table__slope"><p>98.7</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td><div class="table__offset"><p>-0.3</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td>Петров Иван Генадьевич</td></tr><tr> <td><p class="table__date">04.10.19</p><p class="table__time">10:23</p></td><td><p class="table__solution">В1: № 2000460789536: pH 1.09 </p><p class="table__solution">В2: № 2000460789536: pH 2.00 </p><p class="table__solution">В3: № 2000460789536: pH 4.01 </p><p class="table__solution">В4: № 2000460789536: pH 7.00 </p><p class="table__solution">В5: № 2000460789536: pH 9.21</p></td><td class="table__information"> <p><span>Data: </span>04.10.19 10:23</p><div><span>Slope, % (Norm 95-105): </span> <div class="table__slope"><p>90.1</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#error"></use></svg></div></div><div><span>Offset, mV (Norm ±(0-20)): </span> <div class="table__offset"><p>-0.5</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></div><p><span>User: </span>Генадьев Иван Петрович</p></td><td><div class="table__slope"><p>90.1</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#error"></use></svg></div></td><td><div class="table__offset"><p>-0.5</p><svg class="table__icon"><use xlink:href="assets/icons/sprite.svg#ok"></use></svg></div></td><td>Генадьев Иван Петрович</td></tr></tbody></table></div></body></html>
